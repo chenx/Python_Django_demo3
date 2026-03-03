@@ -6,6 +6,9 @@ Use Django REST Framework (DRF) to provide API end points.
 
 User needs to log in to access personal homepage and API endpoints.
 
+The schema design includes a new field “phone” in the User table, so we need a customized User model. To create a customized User model, one can use either `AbstractUser` or `AbstractBaseUser`. As a comparison, `AbstractUser` includes all the default Django user fields and is best for minor customizations, while `AbstractBaseUser` is a minimal base class for when you need to redefine the entire user model from scratch. In this case, `AbstractUser` is used.
+
+
 Environment:
 - Python 3.14.2
 - DJango 6.0
